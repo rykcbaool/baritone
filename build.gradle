@@ -50,8 +50,15 @@ apply plugin: 'org.spongepowered.mixin'
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
     sourceCompatibility = targetCompatibility = '1.8'
-    options.encoding = "UTF-8" // allow emoji in comments :^)
+    options.encoding = "UTF-8"
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 
 sourceSets {
     api {
